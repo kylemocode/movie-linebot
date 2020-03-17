@@ -4,7 +4,12 @@ const { AT_MOVIE_NEW_URL, AT_MOVIE_WILL_RELEASED_URL } = require('../../constant
 // 本週上映
 async function newMovies() {
 	try {
-		const browser = await puppeteer.launch();
+		const browser = await puppeteer.launch({
+			args: [
+				'--no-sandbox',
+				'--disable-setuid-sandbox',
+			]
+		});
 		const page = await browser.newPage();
 		await page.goto(AT_MOVIE_NEW_URL, { waitUntil: 'networkidle2' });
 		const data = await page.evaluate(() => {
@@ -28,7 +33,12 @@ async function newMovies() {
 // 新片快報
 async function willReleasedMovies() {
 	try {
-		const browser = await puppeteer.launch();
+		const browser = await puppeteer.launch({
+			args: [
+				'--no-sandbox',
+				'--disable-setuid-sandbox',
+			]
+		});
 		const page = await browser.newPage();
 		await page.goto(AT_MOVIE_WILL_RELEASED_URL, { waitUntil: 'networkidle2' });
 		const data = await page.evaluate(() => {
