@@ -6,8 +6,7 @@ async function newMovies() {
 	try {
 		const browser = await puppeteer.launch({
 			args: [
-				'--no-sandbox',
-				'--disable-setuid-sandbox',
+				'--no-sandbox'
 			]
 		});
 		const page = await browser.newPage();
@@ -35,8 +34,7 @@ async function willReleasedMovies() {
 	try {
 		const browser = await puppeteer.launch({
 			args: [
-				'--no-sandbox',
-				'--disable-setuid-sandbox',
+				'--no-sandbox'
 			]
 		});
 		const page = await browser.newPage();
