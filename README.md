@@ -1,5 +1,5 @@
 **Node.js movie linebot with puppteer crawler**
-！[Kyle 電影報馬仔](https://i.imgur.com/0AWUN11.png)
+![](https://i.imgur.com/0AWUN11.png)
 
 Kyle 電影報馬仔是一款用 Node.js 搭配 puppteer 爬蟲並串接 linebot sdk 的聊天機器人
 
